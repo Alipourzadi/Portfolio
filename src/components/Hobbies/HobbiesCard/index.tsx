@@ -22,7 +22,7 @@ export default function HobbiesCard({title, description, img}: Props) {
         <h2
           className={cn(
             montserrat.className,
-            " leading-relaxed text-xl md:text-2xl text-center md:text-left font-semibold"
+            "leading-relaxed text-xl md:text-2xl text-center md:text-left font-semibold"
           )}
         >
           {title}

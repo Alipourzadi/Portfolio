@@ -15,8 +15,8 @@ const socialMediaLinks = [
 
 export default function SocialMedia() {
   return (
-    <div className=" mx-auto w-full space-y-3 flex flex-col items-center">
-      <b className="text-base md:text-lg font-yekanExtraBold">Contact-Me </b>
+    <div className=" mx-auto w-full space-y-3 flex flex-col items-center text-xl">
+      <b className="pb-4  font-yekanExtraBold">Contact-Me </b>
       <ul className="grid grid-cols-1 w-fit gap-2 text-center">
         {socialMediaLinks.map((socialMedia) => {
           return (
