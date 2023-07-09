@@ -21,7 +21,7 @@ export default function index() {
         Do you want to know About me?
       </h1>
       <hr className="w-full h-1" />
-      <p className={cn(montserrat.className, "lg:text-xl text-base")}>
+      <p className={cn(montserrat.className, "lg:text-lg text-base")}>
         My hobbies are watching movie,playing football,and reading book,...
       </p>
       <Button size={"lg"} className="text-xl" onClick={smoothScrollHandler}>

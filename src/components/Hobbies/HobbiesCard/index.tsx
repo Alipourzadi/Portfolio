@@ -36,7 +36,7 @@ export default function HobbiesCard({title, description, img}: Props) {
       <Button
         onClick={() => setShowMore((prevState) => !prevState)}
         variant={"outline"}
-        className="text-2xl text-white"
+        className="text-2xl"
       >
         {!showMore ? "more..." : "less"}
       </Button>
