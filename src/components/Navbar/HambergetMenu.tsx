@@ -1,36 +1,36 @@
-import {
-  navbarItems,
-  toggeldMenuLink,
-  toggeldMenuSessions,
-} from "@/lib/NavbarItems";
+import {BookOpenIcon, HomeIcon} from "@heroicons/react/24/outline";
 import Links from "./Links";
 
 type Props = {
   menuToggledHandler: () => void;
 };
 
+export const navbarItems = [
+  {
+    name: "Home",
+    path: "/",
+    icon: <HomeIcon className="h-6 w-6 text-primary" />,
+  },
+  {
+    name: "About",
+    path: "/about",
+    icon: <BookOpenIcon className="h-6 w-6 text-primary" />,
+  },
+];
+
 export default function HambergetMenu({menuToggledHandler}: Props) {
   return (
     <div className="relative">
       <div
-        className="fixed z-40 min-h-screen w-screen  bg-gray-500 opacity-25"
+        className="fixed z-40 min-h-screen w-screen "
         onClick={menuToggledHandler}
       ></div>
       <div
-        className={`fixed right-0 z-40 flex h-screen w-[180px]  flex-col bg-gray-200  text-gray-600 drop-shadow-md backdrop:bg-black/60`}
+        className={`fixed left-0 z-40 flex animate-accordion-up transition-all  min-h-screen w-[180px] bg-white dark:bg-secondary  text-primary drop-shadow-md backdrop:bg-black/60`}
       >
-        <div className="flex-1 items-center justify-center overflow-auto px-2 pt-10">
-          <div className="flex flex-col gap-5 px-2 py-3">
-            <Links itemsLinks={toggeldMenuLink} />
-          </div>
-          <hr className="h-[2px] w-full bg-gray-400" />
-          {/* Menu Items */}
-          <div className=" flex flex-col gap-5 px-2 py-3">
+        <div className="flex-1 flex-col my-[50%] overflow-auto px-2 pt-10">
+          <div className=" flex-1 flex-col space-y-4  px-2 py-3">
             <Links itemsLinks={navbarItems} />
-          </div>
-          <hr className="h-[2px] w-full bg-gray-400" />
-          <div className=" flex flex-col gap-4 px-2 py-3 font-yekanExtraBold">
-            <Links itemsLinks={toggeldMenuSessions} />
           </div>
         </div>
       </div>

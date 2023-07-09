@@ -33,7 +33,7 @@ const HeaderNav = ({isScroll}: Props) => {
         )}
         <div className="flex items-center gap-2">
           <ThemeIcon />
-          <NavActions />
+          {/* <NavActions /> */}
         </div>
       </NavbarLayout>
       {!isAboveMediumScreen && menuIsToggled && (

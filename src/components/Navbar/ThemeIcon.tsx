@@ -8,12 +8,12 @@ export default function ThemeIcon() {
   const darkThemeHandler = () => {
     setDarkTheme((pervState) => !pervState);
     if (
-      localStorage.getItem("theme") == "light" ||
+      localStorage.getItem("theme") == "dark" ||
       !localStorage.getItem("theme")
     ) {
-      localStorage.setItem("theme", "dark");
-    } else {
       localStorage.setItem("theme", "light");
+    } else {
+      localStorage.setItem("theme", "dark");
     }
   };
 

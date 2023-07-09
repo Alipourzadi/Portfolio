@@ -1,9 +1,17 @@
 import Hero from "@/components/Hero";
+import Introduction from "@/components/Introduction";
+import Head from "next/head";
 
 export default function HomePage() {
   return (
-    <main className="flex items-center justify-center">
-      <Hero />
-    </main>
+    <>
+      <Head>
+        <link rel="manifest" href="/manifest.json" />
+      </Head>
+      <main className="mx-auto">
+        <Hero />
+        <Introduction />
+      </main>
+    </>
   );
 }

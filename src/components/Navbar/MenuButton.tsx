@@ -4,13 +4,13 @@ type Props = {
 };
 
 const MenuButton = ({isMenuToggeld, menuToggledHandler}: Props) => {
-  const genericHamburgerLine = `h-0.5 w-4 my-1 rounded-full ${
-    isMenuToggeld ? "bg-white" : "bg-gray-300"
+  const genericHamburgerLine = `h-0.5 w-4 my-1 rounded-full text-black ${
+    isMenuToggeld ? "bg-primary" : "bg-primary"
   } transition ease transform duration-300 `;
 
   return (
     <button
-      className="z-50 rounded-full bg-blue-500 px-3 py-2 text-white drop-shadow-md"
+      className="z-50 rounded-full px-3 py-2   drop-shadow-md"
       onClick={menuToggledHandler}
     >
       <div className="group">
@@ -18,19 +18,19 @@ const MenuButton = ({isMenuToggeld, menuToggledHandler}: Props) => {
           className={`${genericHamburgerLine} ${
             isMenuToggeld
               ? "translate-y-1.5 rotate-45 opacity-100 group-hover:opacity-100"
-              : "opacity-50 group-hover:opacity-100"
+              : "opacity-100"
           }`}
         />
         <div
           className={`${genericHamburgerLine} ${
-            isMenuToggeld ? "opacity-0" : "opacity-50 group-hover:opacity-100"
-          }`}
+            isMenuToggeld ? "opacity-0 " : "opacity-100 w-3"
+          } `}
         />
         <div
           className={`${genericHamburgerLine} ${
             isMenuToggeld
-              ? "-translate-y-1.5 -rotate-45 opacity-100 group-hover:opacity-100"
-              : "opacity-50 group-hover:opacity-100"
+              ? "-translate-y-1.5 -rotate-45 opacity-100 group-hover:opacity-100 w-4"
+              : "opacity-100 w-2"
           }`}
         />
       </div>

@@ -10,7 +10,7 @@ type Props = {
 const NavLinks = ({itemsLinks}: Props) => {
   return (
     <div className="flex w-full items-center justify-between">
-      <div className="flex items-center justify-between gap-4 text-sm">
+      <div className="flex items-center justify-between gap-8 text-sm">
         <Links itemsLinks={itemsLinks} />
       </div>
     </div>

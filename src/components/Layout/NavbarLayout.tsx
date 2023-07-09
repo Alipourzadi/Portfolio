@@ -7,13 +7,13 @@ type Props = {
 };
 
 const NavbarLayout = ({isMenuToggled, isScroll, children}: Props) => {
-  const navbarBackground = "bg-gray-500 drop-shadow";
-  const flexBetween = "flex items-center justify-between w-full";
+  const navbarBackground = "backdrop-blur shadow-md  h-[12%] ";
+  const flexBetween = "flex items-center justify-between w-full h-[10%] ";
   return (
     <div
       className={`${
         !isMenuToggled && isScroll ? navbarBackground : "bg-none"
-      } ${flexBetween} fixed top-0 z-50 w-full py-4 px-8`}
+      } ${flexBetween} fixed  transition-all duration-300 top-0 z-50 w-full py-4 px-8`}
     >
       <div className={`${flexBetween} mx-auto w-5/6`}>
         <div className={`${flexBetween} w-full `}>{children}</div>
