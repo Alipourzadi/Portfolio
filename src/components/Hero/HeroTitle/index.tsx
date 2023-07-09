@@ -8,7 +8,7 @@ export default function index() {
         Hello world<span className="animate-pulse">_</span>
       </h1>
       <h2 className="text-5xl">Ali Pourzadi</h2>
-      <h3 className="font-kalameh text-4xl animate-typewriter">
+      <h3 className="font-kalameh text-3xl animate-typewriter">
         another front-end developer
       </h3>
     </div>

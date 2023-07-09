@@ -17,12 +17,14 @@ export default function index() {
   };
   return (
     <>
-      <h1 className="text-6xl text-center">Do you want to know About me?</h1>
+      <h1 className="lg:text-6xl text-4xl text-center">
+        Do you want to know About me?
+      </h1>
       <hr className="w-full h-1" />
-      <p className={cn(montserrat.className, "text-xl")}>
+      <p className={cn(montserrat.className, "lg:text-xl text-base")}>
         My hobbies are watching movie,playing football,and reading book,...
       </p>
-      <Button size={"lg"} className="text-lg" onClick={smoothScrollHandler}>
+      <Button size={"lg"} className="text-xl" onClick={smoothScrollHandler}>
         See more..
       </Button>
     </>

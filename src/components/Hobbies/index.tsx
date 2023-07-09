@@ -30,7 +30,7 @@ const hobbies = [
 
 export default function index() {
   return (
-    <div className="max-w-5xl w-3/4 lg:w-fit  mx-auto space-y-3 my-4">
+    <div className="max-w-5xl w-5/6 lg:w-fit  mx-auto space-y-3 my-4">
       <h2 className="text-center text-5xl">My Hobbies</h2>
       {hobbies.map((item, idx) => {
         return (

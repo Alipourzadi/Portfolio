@@ -1,6 +1,8 @@
-import React from "react";
+"use client";
+import React, {useState} from "react";
 import {Montserrat} from "next/font/google";
 import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -12,14 +14,15 @@ type Props = {
   img?: React.ReactNode;
 };
 
-export default function index({title, description, img}: Props) {
+export default function HobbiesCard({title, description, img}: Props) {
+  const [showMore, setShowMore] = useState<boolean>(false);
   return (
-    <div className="bg-secondary rounded-sm px-6 py-4 shadow-sm text-3xl space-y-2">
+    <div className="bg-secondary rounded-sm px-6 py-4 shadow-sm text-3xl space-y-2 mx-auto text-center">
       <div>
         <h2
           className={cn(
             montserrat.className,
-            " leading-relaxed text-2xl font-semibold"
+            " leading-relaxed text-xl md:text-2xl text-center md:text-left font-semibold"
           )}
         >
           {title}
@@ -27,7 +30,16 @@ export default function index({title, description, img}: Props) {
         {img}
       </div>
       <hr className="h-2 w-full" />
-      <p className={cn(montserrat.className, "text-lg")}>{description}</p>
+      <p className={cn(montserrat.className, "text-sm md:text-lg text-left")}>
+        {!showMore ? `${description.slice(0, 300)}...` : description}
+      </p>
+      <Button
+        onClick={() => setShowMore((prevState) => !prevState)}
+        variant={"outline"}
+        className="text-2xl text-white"
+      >
+        {!showMore ? "more..." : "less"}
+      </Button>
     </div>
   );
 }
